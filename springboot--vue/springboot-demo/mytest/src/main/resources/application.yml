@@ -1,0 +1,26 @@
+
+server:
+  port: 8090
+  servlet:
+    context-path: /api
+
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC
+    username: root
+    password: root
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:templates/
+    suffix: .html
+    servlet:
+      content-type: text/html
+#Mapper.xml文件配置
+mybatis:
+  mapper-locations: classpath:Mapper/*Mapper.xml
+
+
+
